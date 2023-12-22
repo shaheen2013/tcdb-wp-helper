@@ -30,7 +30,7 @@ function custom_user_column_content($value, $column_name, $user_id) {
     if ($column_name == 'qr_code') {
         $uData = 'user_id='.$user_id;
         $qrImageUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=50x50&data='.$uData;
-        $qrLinkUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=user_id='.$uData;
+        $qrLinkUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=500x500&data='.$uData;
         return '<a target="_blank"  href="'.$qrLinkUrl.'"> <img src="'.$qrImageUrl.'" /></a>';
     }
     return $value;
